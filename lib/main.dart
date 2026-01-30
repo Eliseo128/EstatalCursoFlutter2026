@@ -9,7 +9,7 @@ void main() {
           centerTitle: true),
         body: Center(
           child: 
-          Text("Bienvenido a mi App")),
+          Text("Bienvenido a mi App con Flutter")),
       ),
     ),
   );
