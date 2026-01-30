@@ -1,6 +1,16 @@
 # myapp
 
 A new Flutter project.
+pantalla 1
+<img width="587" height="583" alt="image" src="https://github.com/user-attachments/assets/38349f9e-976c-4ff5-abaa-1aac6ad5746a" />
+
+pantalla 2
+
+<img width="1069" height="577" alt="image" src="https://github.com/user-attachments/assets/60a96168-32d4-43aa-8f2d-389081ddd140" />
+
+pantalla 3
+
+<img width="1071" height="582" alt="image" src="https://github.com/user-attachments/assets/e5cda634-6665-4f3b-a954-9571c8eee9c5" />
 
 ## Getting Started
 
