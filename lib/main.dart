@@ -1,30 +1,85 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MiTienda());
+void main() => runApp(MiAppRegistro());
 
-class MiTienda extends StatelessWidget {
-  const MiTienda({super.key});
+class MiAppRegistro extends StatelessWidget {
+  const MiAppRegistro({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-       appBar: AppBar(
-        leading: Icon(Icons.add_a_photo),
-        backgroundColor: Colors.amberAccent,
-        elevation: 10,
-        
-        title: Text('Mi Tienda Nava 128'),
-          actions: [
-                Icon(Icons.more_vert),
-            ],
-        //centerTitle: true,
-       ),
+      title: "Registro Nava",
+      theme: ThemeData(primarySwatch: Colors.blue),
+      // Rutas nombradas
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const PantallaBienvenida(),
+        '/datos': (context) => const PantallaDatos(),
+        '/final': (context) => const PantallaFinal(),
+      },// fin rutas
+    );
+  } // fin widget build
+}// fin clase MiAppRegistro
+
+class PantallaBienvenida extends StatelessWidget {
+  const PantallaBienvenida({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Bienvenido'),
+        backgroundColor: Colors.amber,
+      ),
+     body: Center(
+      child: ElevatedButton(
+        onPressed: () => Navigator.pushNamed(context, '/datos'),
+        child: Text("Empezar Registro"),
+      ),
+     ),
+
+    );
+  }
+}// fin pantalla binvenida
+
+class PantallaDatos extends StatelessWidget {
+  const PantallaDatos({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Datos Personales'),
+        backgroundColor: Colors.cyanAccent,
+      ),
       body: Center(
-        child: Text("Lista de productos disponibles"),
+        child: ElevatedButton(
+          onPressed: () => Navigator.pushNamed(context, '/final'),
+          child: Text("Finalizar Registro"),
+        ),
       ),
+    );
+  }
+}// fin pantalla datos
+
+class PantallaFinal extends StatelessWidget {
+  const PantallaFinal({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Final'),
+        backgroundColor: Colors.greenAccent,
       ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () => Navigator.pushNamed(context, '/'),
+          child: Text("Volver a Bienvenida"),
+        )
+
+      )
     );
   }
 }
